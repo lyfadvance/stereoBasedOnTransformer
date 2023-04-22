@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from .utils import split_feature, merge_splits, split_feature_1d, merge_splits_1d
-
+'''
 def single_head_full_attention(q, k, v):
     # q, k, v: [B, L, C]
     assert q.dim() == k.dim() == v.dim() == 3
@@ -501,4 +501,3 @@ class SelfAttnPropagation(nn.Module):
                                                    ).permute(0, 3, 1, 2).contiguous()  # [B, 2, H, W]
 
         return out
-'''
